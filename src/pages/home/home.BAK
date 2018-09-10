@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Repl-ai対話
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <div class="balloon-r">
+  <ion-item>{{systemText.expression}}</ion-item>
+ </div>
+
+ <div id="footer"> 
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input id="txtMessage" name="txtMessage" type="text" #txtMessage class="message" placeholder="メッセージを入力してください">
+      </label>
+      <button ion-button round (click)="onClick(txtMessage.value)">送信</button>
+  
+    </div>
+  </div>
+</ion-content>
