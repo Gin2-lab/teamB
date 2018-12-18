@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Repl-ai対話
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src ="assets/imgs/image1.png" alt="" height="40%" width="250px">
+
+  <div class="balloon-l">
+      <ion-item>{{userMessage}}</ion-item>
+  </div>
+      
+ <div class="balloon-r">
+  <ion-item>{{systemText.expression}}</ion-item>
+ </div>
+
+ <div id="footer"> 
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input id="txtMessage" name="txtMessage" type="text" #txtMessage class="message" placeholder="メッセージを入力してください">
+      </label>
+      <button ion-button round (click)="onClick(txtMessage.value)">送信</button>
+  
+    <button ion-button block (click)="onSetClick()">書込</button>
+    <button ion-button block (click)="onGetClick()">読込</button>
+   
+    <label class="item item-input">
+      <input type="text" [(ngModel)]="text1" id="text1" class="message" placeholder="書き込みたいものを入力してください">
+      <input type="text" [(ngModel)]="text2" id="text2" class="message" placeholder="ここに読み込まれます">
+    </label>
+    
+  </div>
+</div>
+
+</ion-content>
